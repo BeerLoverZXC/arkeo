@@ -27,7 +27,7 @@ git checkout master && \
 TAG=testnet make install
 
 RUN arkeod config chain-id $ARKEO_CHAIN_ID && \
-arkeod init $NODENAME --chain-id $ARKEO_CHAIN_ID
+arkeod init "Stake Shark" --chain-id $ARKEO_CHAIN_ID
 
 RUN curl -L https://snapshots-testnet.nodejumper.io/arkeo/genesis.json > $HOME/.arkeo/config/genesis.json && \
 curl -L https://snapshots-testnet.nodejumper.io/arkeo/addrbook.json > $HOME/.arkeo/config/addrbook.json
