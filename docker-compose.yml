@@ -11,6 +11,8 @@ services:
     volumes:
       - arkeo_volume:/app/.arkeo
       - ./entrypoint.sh:/app/entrypoint.sh
+      - arkeo_bin:/app/go
 
 volumes:
   arkeo_volume:
+  arkeo_bin:
