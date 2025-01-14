@@ -1,6 +1,8 @@
 services:
   node-arkeo:
-    image: arkeo
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: arkeo-node
     ports:
       - "26656:26656"
