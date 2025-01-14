@@ -1,0 +1,14 @@
+services:
+  node-arkeo:
+    image: arkeo
+    container_name: arkeo-node
+    ports:
+      - "26656:26656"
+      - "26660:26660"
+    restart: unless-stopped
+    volumes:
+      - arkeo_volume:/app/.arkeo
+      - ./entrypoint.sh:/app/entrypoint.sh
+
+volumes:
+  arkeo_volume:
