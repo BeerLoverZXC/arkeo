@@ -9,10 +9,8 @@ services:
       - "26660:26660"
     restart: unless-stopped
     volumes:
-      - arkeo_volume:/app/.arkeo
+      - arkeo_volume:/app
       - ./entrypoint.sh:/app/entrypoint.sh
-      - arkeo_bin:/app/go
 
 volumes:
   arkeo_volume:
-  arkeo_bin:
