@@ -1,3 +1,3 @@
 #!/bin/sh
 sleep 10000000
-arkeod start
+cosmovisor run start
