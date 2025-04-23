@@ -22,7 +22,7 @@ rm "go$GO_VER.linux-amd64.tar.gz" && \
 mkdir -p go/bin
 
 RUN curl -L https://github.com/arkeonetwork/arkeo/releases/download/v1.0.11/arkeod_1.0.11_linux_amd64.zip -o arkeo.zip && \
-unzip arkeod.zip && \ 
+unzip arkeo.zip && \ 
 rm arkeo.zip && \
 mkdir -p /app/arkeo/bin /app/.arkeo/cosmovisor/upgrades /app/.arkeo/cosmovisor/genesis/bin && \
 mv /app/arkeod /app/.arkeo/cosmovisor/genesis/bin/arkeod
