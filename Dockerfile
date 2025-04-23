@@ -8,7 +8,7 @@ NODENAME="Stake Shark" \
 ARKEO_CHAIN_ID="arkeo-main-v1" \
 GO_VER="1.22.3" \
 WALLET="wallet" \
-PATH="/app/.arkeo/cosmovisor/current:/usr/local/go/bin:/app/go/bin:${PATH}" \
+PATH="/usr/local/go/bin:/app/go/bin:${PATH}" \
 DAEMON_NAME=arkeod \
 DAEMON_HOME=/app/.arkeo \
 DAEMON_ALLOW_DOWNLOAD_BINARIES=false \
@@ -29,7 +29,7 @@ mv /app/arkeod /app/.arkeo/cosmovisor/genesis/bin/arkeod
 
 RUN go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 
-RUN arkeod init "Stake Shark" --chain-id=arkeo-main-v1
+RUN /app/.arkeo/cosmovisor/genesis/bin/arkeod init "Stake Shark" --chain-id=arkeo-main-v1
 
 RUN wget -O $HOME/.arkeo/config/genesis.json "https://server-1.stavr.tech/Mainnet/Arkeo/genesis.json" && \
 wget -O $HOME/.arkeo/config/addrbook.json "https://server-1.stavr.tech/Mainnet/Arkeo/addrbook.json"
